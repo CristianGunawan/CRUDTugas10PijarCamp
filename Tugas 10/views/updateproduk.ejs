@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="updatehias.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #kontainer {
+        text-align: center;
+        margin: auto;
+        border-style: solid;
+        width: 50%;
+      }
+
+      #judul {
+        margin: 10px;
+      }
+
+      #kontainerform {
+        margin: auto;
+        border-style: solid;
+        margin: 10px;
+        padding: 10px;
+      }
+
+      #tomboltambah {
+        font-size: 15px;
+        margin: 10px 0px;
+        width: 100%;
+        height: 35px;
+        border-radius: 5px;
+        background-color: #82cd47;
+        border-style: none;
+      }
+
+      #kontainerform input {
+        width: 100%;
+        margin: 5px;
+        height: 30px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="kontainer">
+      <div id="judul">
+        <h1>Update Produk</h1>
+      </div>
+      <div id="kontainerform">
+        <form
+          method="POST"
+          action="/<%= cariUpdateProduk.id %>/updateproduk?_method=PUT"
+        >
+          <label for="nama1">Nama: </label>
+          <br />
+          <input
+            type="text"
+            id="nama1"
+            name="nama1"
+            value="<%= cariUpdateProduk.nama %>"
+            required
+          />
+          <br />
+          <label for="keterangan1">Keterangan: </label>
+          <br />
+          <input
+            type="text"
+            id="keterangan1"
+            name="keterangan1"
+            value="<%= cariUpdateProduk.keterangan %>"
+            required
+          />
+          <br />
+          <label for="harga1">Harga: </label>
+          <br />
+          <input
+            type="text"
+            id="harga1"
+            name="harga1"
+            value="<%= cariUpdateProduk.harga %>"
+            required
+          />
+          <br />
+          <label for="jumlah1">Jumlah: </label>
+          <br />
+          <input
+            type="text"
+            id="jumlah1"
+            name="jumlah1"
+            value="<%= cariUpdateProduk.jumlah %>"
+            required
+          />
+          <br />
+          <button id="tomboltambah">Update</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

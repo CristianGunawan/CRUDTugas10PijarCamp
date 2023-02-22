@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="hiasweb.css" />
+  </head>
+  <body>
+    <div id="kontainer">
+      <div id="judul">
+        <h1>Selamat Datang</h1>
+      </div>
+      <div id="kontainer1">
+        <h1 id="produk">Produk</h1>
+        <div id="tambahproduk">
+          <a href="/tambahproduk"><button>Tambah Produk</button></a>
+        </div>
+        <div id="kontainerkartu">
+          <% for(nilai of cariProduk1) {%>
+          <div class="kartu">
+            <div id="namaid">
+              <p>Nama: <%= nilai.nama %></p>
+              <p>Keterangan: <%= nilai.keterangan %></p>
+              <p>Harga: <%= nilai.harga %></p>
+              <p>Jumlah: <%= nilai.jumlah %></p>
+              <a href="/<%= nilai.id %>/detailproduk">
+                <button id="detail">Detail</button>
+              </a>
+            </div>
+            <div id="tombol">
+              <a href="/<%= nilai._id %>/updateproduk">
+                <button class="tombol1" id="edit">edit</button>
+              </a>
+              <br />
+              <form
+                method="POST"
+                action="/<%= nilai._id %>/hapusproduk?_method=DELETE"
+                id="formulir"
+              >
+                <button class="tombol1" id="hapus">Hapus</button>
+              </form>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

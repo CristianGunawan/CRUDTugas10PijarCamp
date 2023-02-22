@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #kontainer {
+        text-align: center;
+        margin: auto;
+        border-style: solid;
+        width: 50%;
+      }
+
+      #kontainer1{
+        margin: 10px;
+        border-style: solid;
+        background-color: #ECF2FF;
+      }
+
+      #judul {
+        padding: 10px;
+        background-color: #85CDFD;
+        color: white
+      }
+      p{
+        margin: 5px;
+        font-size: 25px;
+      }
+      #tombol{
+        display: flex;
+      }
+      button{
+        flex-grow: 1;
+        height: 30px;
+      }
+      #home{
+        border-style: none;
+        background-color: green;
+        font-size: 20px;
+      }
+      #update{
+        border-style: none;
+        background-color: darkred;
+        font-size: 20px;
+      }
+      #hapus{
+        border-style: none;
+        background-color: red;
+        font-size: 20px;
+      }
+      button{
+        border-radius: 5px;
+        margin: 2px;
+      }
+      a{
+        color:white;
+        font-size: 20px;
+        text-decoration-line: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="kontainer">
+      <div id="judul">
+        <h1>Detail Produk</h1>
+      </div>
+      <div id="kontainer1">
+        <p>Nama: <%= cariProduk.nama %></p>
+        <p>Keterangan: <%= cariProduk.keterangan %></p>
+        <p>Harga: <%= cariProduk.harga %></p>
+        <p>Jumlah: <%= cariProduk.jumlah %></p>
+        
+        </div>
+        <div id="tombol">
+        <button id="home"><a href="/home">Home</a></button>
+        <button id="update"> <a href="/<%= cariProduk.id %>/updateproduk">Edit</a></button>
+        <button id="hapus"><a href="/<%= cariProduk.id %>/hapusproduk">Hapus</a></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

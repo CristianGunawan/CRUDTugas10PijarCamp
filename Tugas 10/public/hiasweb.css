@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+#kontainer{
+    margin: auto;
+    width: 60%;
+}
+
+#judul{
+    text-align: center;
+    background-color: #85CDFD;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+#kontainerkartu{
+    margin: 5px;
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #537FE7;
+
+}
+
+.kartu{
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#namaid{
+    width: 60%;
+    padding: 10px;
+}
+
+#namaid p {
+    padding: 10px;
+    font-size: 20px;
+}
+#tombol{
+    width: 40%;
+}
+
+.tombol1{
+    width: 100%;
+    height: 50%;
+}
+
+#produk{
+    text-align: center;
+    margin: 10px;
+}
+
+#tambahproduk{
+    margin: auto;
+    width: 100%;
+}
+#tambahproduk button{
+    width: 100%;
+    height: 35px;
+    font-size: 20px;
+    background-color: #181823;
+}
+
+#formulir{
+    height: 100%;
+}
+
+#detail {
+    width: 100%;
+    height: 30px;
+    background-color: darkgoldenrod;
+}
+
+#edit{
+    background-color: green;
+}
+
+#hapus{
+    background-color: red;
+}
+
+button{
+    color: white;
+    font-size: large;
+    border-style: none;
+    border-radius: 5px;
+}
+
+p{
+    font-size: larger;
+}
